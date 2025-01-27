@@ -1,0 +1,97 @@
+/* Temas */
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #3b82f6;
+    --color-text: #1f2937;
+}
+
+.theme-dark {
+    --color-primary: #1f2937;
+    --color-secondary: #60a5fa;
+    --color-text: #f9fafb;
+}
+
+.theme-nature {
+    --color-primary: #ecfdf5;
+    --color-secondary: #059669;
+    --color-text: #064e3b;
+}
+
+.theme-sunset {
+    --color-primary: #fff7ed;
+    --color-secondary: #ea580c;
+    --color-text: #9a3412;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.theme-selector {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.theme-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.theme-btn.light { background-color: white; }
+.theme-btn.dark { background-color: #1f2937; }
+.theme-btn.nature { background-color: #059669; }
+.theme-btn.sunset { background-color: #ea580c; }
+
+.theme-btn:hover, .theme-btn.active {
+    transform: scale(1.1);
+    border-color: var(--color-secondary);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-link {
+    display: block;
+    padding: 12px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
